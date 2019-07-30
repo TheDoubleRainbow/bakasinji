@@ -1,0 +1,21 @@
+{
+  "name": "bakasinji",
+  "version": "0.0.1",
+  "description": "Telegram bot Baka Sinji",
+  "main": "index.js",
+  "dependencies": {
+    "telegraf": "^3.32.0",
+    "telegraph": "^0.8.22"
+  },
+  "devDependencies": {},
+  "scripts": {
+    
+  },
+
+  "nodemonConfig": {
+    "ignore": ["*.json"]
+  },
+
+  "author": "Andrew Khokhlov",
+  "license": "ISC"
+}
