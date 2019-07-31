@@ -164,6 +164,10 @@ bot.on('text', (ctx) => {
         if(inclds.tell(text) && inclds.batya(text)) {
             images.sendImage(ctx, `/img/batya.jpg`)
         }
+
+        if(inclds.fuckYouLeatherMan(text)) {
+            ctx.reply(`А ннахуй тебе шкіряний чоловіче. \n ${replyName} давай з\'ясуємо це на ринзі`)
+        }
     }
     catch(e) {
         console.log(e);
