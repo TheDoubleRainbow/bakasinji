@@ -72,7 +72,7 @@ bot.on('text', (ctx) => {
 
     if(inclds.botName(text) && inclds.whatsMyName(text)) {
         if (names['' + msg.from.id]) {
-            ctx.reply(`Я знаю тебе як ${names['' + msg.from.id] ? names['' + msg.from.id].name : msg.from.first_name}`);
+            ctx.reply(`Тебе звати ${names['' + msg.from.id] ? names['' + msg.from.id].name : msg.from.first_name}`);
         }
     }
 
