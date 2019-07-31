@@ -70,8 +70,14 @@ bot.on('text', (ctx) => {
         ctx.reply(`Ок, ${newName}. Понял принял обработал`);
     }
 
+    if(inclds.botName(text) && inclds.whatsMyName(text)) {
+        if (names['' + msg.from.id]) {
+            ctx.reply(`Я знаю тебе як ${names['' + msg.from.id] ? names['' + msg.from.id].name : msg.from.first_name}`);
+        }
+    }
+
     if (inclds.botName(text) && inclds.greeting(text)) {
-        ctx.reply(`Вечер в хату, ${names['' + msg.from.id] ? names['' + msg.from.id].name : msg.from.first_namegit}`)
+        ctx.reply(`Вечер в хату, ${names['' + msg.from.id] ? names['' + msg.from.id].name : msg.from.first_name}`)
     }
 
     if (inclds.botName(text) && inclds.whatDoULike(text)) {
