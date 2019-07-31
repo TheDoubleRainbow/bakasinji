@@ -45,6 +45,10 @@ bot.on('sticker', ctx => {
     if (sticker.file_id === "CAADAgADCFgAAp7OCwAB0rRJHu579_kWBA") {
         telegram.sendSticker(ctx.message.chat.id, "CAADAgADCFgAAp7OCwAB0rRJHu579_kWBA");
     }
+
+    if (sticker.file_id === "CAADAgADVVAAAp7OCwABEh58loKKDpkWBA") {
+        ctx.reply(`Хорошо шо ти спитав, ${replyName}. Нормально, ошейніки робим, по тіхотьку по маленьку`);
+    }
 })
 
 bot.on('text', (ctx) => {
@@ -52,6 +56,7 @@ bot.on('text', (ctx) => {
     console.log('Message: ' + ctx.message.text);
     const msg = ctx.message;
     const text = msg.text;
+    const replyName = names['' + msg.from.id] ? names['' + msg.from.id].name : msg.from.first_name;
 
     if (inclds.botName(text) && inclds.whatRUDoin(text)) {
         ctx.reply('Братва я ніхачу стрелять, я наблюдаю');
@@ -72,12 +77,12 @@ bot.on('text', (ctx) => {
 
     if(inclds.botName(text) && inclds.whatsMyName(text)) {
         if (names['' + msg.from.id]) {
-            ctx.reply(`Тебе звати ${names['' + msg.from.id] ? names['' + msg.from.id].name : msg.from.first_name}`);
+            ctx.reply(`Тебе звати ${replyName}`);
         }
     }
 
     if (inclds.botName(text) && inclds.greeting(text)) {
-        ctx.reply(`Вечер в хату, ${names['' + msg.from.id] ? names['' + msg.from.id].name : msg.from.first_name}`)
+        ctx.reply(`Вечер в хату, ${replyName}`)
     }
 
     if (inclds.botName(text) && inclds.whatDoULike(text)) {
