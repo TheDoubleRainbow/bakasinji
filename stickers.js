@@ -18,6 +18,5 @@ module.exports = {
     send: (ctx, name) => {
         console.log(stickers[name])
         telegram.sendSticker(ctx.message.chat.id, stickers[name]);
-        ctx.reply("А от і трактористи под\'єхалі");
     }
 }

@@ -167,6 +167,7 @@ bot.on('text', (ctx) => {
         if(inclds.trista(text)) {
             let tractors = ['tractor1', 'tractor2', 'tractor3'];
             stickers.send(ctx, tractors[Math.floor(Math.random() * tractors.length)]);
+            ctx.reply("А от і трактористи под\'єхалі");
         }
     }
     catch(e) {
