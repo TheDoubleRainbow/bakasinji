@@ -119,11 +119,10 @@ bot.on('text', (ctx) => {
     }
 
     if(inclds.roma(text) && inclds.insult(text)) {
-        ctx.reply("Однозначно");
-        telegram.sendSticker(msg.chat.id, "CAADAgADRAEAAvmEHxwzgKCb2ndnXxYE")
+        ctx.reply("Ну він парень інтересний, тут не поспориш");
     }
     if(inclds.schoolMan(text) && inclds.insult(text)) {
-      ctx.reply("Согли, осуждаю");
+      ctx.reply("Лучше про Сашку і не скажеш");
     }
 
     if(inclds.botName(text) && inclds.whereDoULive(text)) {
@@ -137,6 +136,10 @@ bot.on('text', (ctx) => {
 
     if(inclds.botName(text) && inclds.appreciation(text)) {
         ctx.reply("Спасіба, ти тож нічо вроді");
+    }
+
+    if(inclds.agree(text)) {
+        ctx.reply("Согли кста");
     }
 })
 
