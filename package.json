@@ -5,12 +5,13 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
+    "ffmpeg": "0.0.4",
     "flickrapi": "^0.6.2",
-    "horizon-youtube-mp3": "^1.9.2",
     "jikan-node": "^1.2.0",
     "request": "^2.88.0",
     "telegraf": "^3.32.0",
-    "telegraph": "^0.8.22"
+    "telegraph": "^0.8.22",
+    "youtube-mp3-downloader": "^0.6.2"
   },
   "devDependencies": {},
   "scripts": {
