@@ -6,6 +6,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "flickrapi": "^0.6.2",
+    "horizon-youtube-mp3": "^1.9.2",
     "jikan-node": "^1.2.0",
     "request": "^2.88.0",
     "telegraf": "^3.32.0",

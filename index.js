@@ -10,6 +10,7 @@ const flickr = require('./api/flickr');
 const inclds = require('./lib/includes');
 const stickers = require('./stickers');
 const images = require('./lib/images');
+const music = require('./lib/music');
 const bot = new Telegraf('947236111:AAHvvf4MmoHcGrn77A9o_E6kZRIZ090D2rQ');
 const names = JSON.parse(fs.readFileSync('namesList.json'));
 
@@ -166,7 +167,11 @@ bot.on('text', (ctx) => {
         }
 
         if(inclds.fuckYouLeatherMan(text)) {
-            ctx.reply(`А ннахуй тебе шкіряний чоловіче. \n ${replyName} давай з\'ясуємо це на ринзі`)
+            ctx.reply(`А ннахуй тебе шкіряний чоловіче. \n${replyName} давай з\'ясуємо це на ринзі`)
+        }
+
+        if(inclds.download(text) && inclds.youtube(text)) {
+            music.download(ctx);
         }
     }
     catch(e) {
