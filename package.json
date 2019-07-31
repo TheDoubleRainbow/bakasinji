@@ -4,6 +4,8 @@
   "description": "Telegram bot Baka Sinji",
   "main": "index.js",
   "dependencies": {
+    "flickrapi": "^0.6.2",
+    "request": "^2.88.0",
     "telegraf": "^3.32.0",
     "telegraph": "^0.8.22"
   },
@@ -11,11 +13,11 @@
   "scripts": {
     "start": "node index.js"
   },
-
   "nodemonConfig": {
-    "ignore": ["*.json"]
+    "ignore": [
+      "*.json"
+    ]
   },
-
   "author": "Andrew Khokhlov",
   "license": "ISC"
 }
