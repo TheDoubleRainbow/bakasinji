@@ -25,8 +25,9 @@ bot.command('romagay', (cmd) => {
 
 bot.on('sticker', ctx => {
     console.log(ctx.message.sticker);
+    const sticker = ctx.message.sticker
 
-    if (ctx.file_id === "CAADAgADAlcAAp7OCwABS7hfCLsVXC0WBA") {
+    if (sticker.file_id === "CAADAgADAlcAAp7OCwABS7hfCLsVXC0WBA") {
         telegram.sendSticker(msg.chat.id, "CAADAgADAlcAAp7OCwABS7hfCLsVXC0WBA");
     }
 })
