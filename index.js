@@ -28,7 +28,7 @@ bot.on('sticker', ctx => {
     const sticker = ctx.message.sticker
 
     if (sticker.file_id === "CAADAgADAlcAAp7OCwABS7hfCLsVXC0WBA") {
-        telegram.sendSticker(msg.chat.id, "CAADAgADAlcAAp7OCwABS7hfCLsVXC0WBA");
+        telegram.sendSticker(ctx.message.chat.id, "CAADAgADAlcAAp7OCwABS7hfCLsVXC0WBA");
     }
 })
 
