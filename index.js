@@ -143,11 +143,11 @@ bot.on('text', (ctx) => {
     }
 
     if(inclds.send(text) && inclds.photo(text) && inclds.ukraine(text)) {
-        flickr.loadRandom('ukraine', ctx, 'ukraine');
+        flickr.loadRandom('japan', ctx, 'ukraine');
     }
 
     if(inclds.send(text) && inclds.photo(text) && inclds.europe(text)) {
-        flickr.loadRandom('europe', ctx, 'europe');
+        flickr.loadRandom('ukraine', ctx, 'europe');
     }
 
 })
