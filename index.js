@@ -123,6 +123,10 @@ bot.on('text', (ctx) => {
         ctx.reply("Тут \n http://www.voe.com.ua/sites/default/files/img_5641_1.jpg");
     }
 
+    if(inclds.botName(text) && inclds.gooseVyebons(text)) {
+        ctx.reply("Веталь, успокойся а то я привстану і пизда, я воєвал на домбасе так то")
+    }
+
 
 })
 
