@@ -1,24 +1,15 @@
 'use strict';
 
-var express = require('express');
-var app = express();
-var path = require('path');
-
-
-app.use(express.static(__dirname + '/'));
-app.get('*', (req, res) =>{
-    res.sendFile(path.resolve(__dirname, './src/index.html'));
-});
-app.listen(process.env.PORT || 8080);
-
 const Telegraf = require('telegraf');
 const fs = require('fs');
 const req = require('request');
 
+const files = require('./lib/files');
 const mal = require('./api/mal');
 const flickr = require('./api/flickr');
-const inclds = require('./includes');
+const inclds = require('./lib/includes');
 const stickers = require('./stickers');
+const images = require('./lib/images');
 const bot = new Telegraf('947236111:AAHvvf4MmoHcGrn77A9o_E6kZRIZ090D2rQ');
 const names = JSON.parse(fs.readFileSync('namesList.json'));
 
@@ -168,6 +159,10 @@ bot.on('text', (ctx) => {
             let tractors = ['tractor1', 'tractor2', 'tractor3'];
             stickers.send(ctx, tractors[Math.floor(Math.random() * tractors.length)]);
             ctx.reply("А от і трактористи под\'єхалі");
+        }
+
+        if(inclds.tell(text) && inclds.batya(text)) {
+            images.sendImage(ctx, `/img/batya.jpg`)
         }
     }
     catch(e) {
