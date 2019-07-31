@@ -20,7 +20,7 @@ const flickr = require('./flickr');
 const inclds = require('./includes');
 const bot = new Telegraf('947236111:AAHvvf4MmoHcGrn77A9o_E6kZRIZ090D2rQ');
 const telegram = new Telegram('947236111:AAHvvf4MmoHcGrn77A9o_E6kZRIZ090D2rQ');
-const names = JSON.parse(fs.readFileSync('names.json'));
+const names = JSON.parse(fs.readFileSync('namesList.json'));
 
 bot.use((ctx, next) => {
     const start = new Date()
@@ -62,7 +62,7 @@ bot.on('text', (ctx) => {
         if (!newName) return false;
         names['' + msg.from.id] = { name: newName };
 
-        fs.writeFile('names.json', JSON.stringify(names), (err) => {
+        fs.writeFile('namesList.json', JSON.stringify(names), (err) => {
             if (err) throw err;
             console.log('New name added');
         });
