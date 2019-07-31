@@ -26,6 +26,7 @@ module.exports = {
     photo: function(text) { return check(text, "фото", "фотку", "картінку", "пікчу")},
     waifu: function(text) { return check(text, "waifu", "вайфу", "аніметян")},
     anime: function(text) { return check(text, "anime", "аніме", "тутлос", "тайтл", "шось глянуть", "шо подивитись")},
+    trista: function(text) { return check(text, "300", "триста", "тристо")},
 
 }
 
