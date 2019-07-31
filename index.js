@@ -71,7 +71,7 @@ bot.on('text', (ctx) => {
     }
 
     if (inclds.botName(text) && inclds.greeting(text)) {
-        ctx.reply(`Вечер в хату, ${names['' + msg.from.id].name ? names['' + msg.from.id].name : msg.from.first_namegit}`)
+        ctx.reply(`Вечер в хату, ${names['' + msg.from.id] ? names['' + msg.from.id].name : msg.from.first_namegit}`)
     }
 
     if (inclds.botName(text) && inclds.whatDoULike(text)) {
