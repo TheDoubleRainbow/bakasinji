@@ -11,7 +11,8 @@ module.exports = {
     football: function(text) { return check(text, "футбол", "футзал", "очко")},
     boomer: function(text) { return check(text, "бумер", "Бумер", "зумер", "думер", "танец", "танцювати", "пляс")},
     topWaifu: function(text) { return check(text, "топ вайфу", "лучша вайфу", "бест вайфу")},
-    y2007: function(text) { return check(text, "2007", "2к7")}
+    y2007: function(text) { return check(text, "2007", "2к7")},
+    roma: function(text) { return check(text, "Рома", "рома", "футболіст", "футзаліст", "рамен", "роман", "Рамен", "Роман", "ромка", "Ромка")},
 }
 
 function check(text) {

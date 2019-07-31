@@ -105,6 +105,11 @@ bot.on('text', (ctx) => {
         telegram.sendSticker(msg.chat.id, "CAADAgADMAAD1RIaCwfc2P78oMQkFgQ");
     }
 
+    if(inclds.roma(text)) {
+        ctx.reply("Однозначно");
+        telegram.sendSticker(msg.chat.id, "CAADAgADRAEAAvmEHxwzgKCb2ndnXxYE")
+    }
+
 })
 
 bot.launch()
