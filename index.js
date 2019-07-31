@@ -119,6 +119,10 @@ bot.on('text', (ctx) => {
       ctx.reply("Согли, осуждаю");
     }
 
+    if(inclds.whereDoULive(text)) {
+        ctx.reply("Тут \n http://www.voe.com.ua/sites/default/files/img_5641_1.jpg");
+    }
+
 
 })
 
