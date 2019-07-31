@@ -14,6 +14,8 @@ module.exports = {
     topWaifu: function(text) { return check(text, "топ вайфу", "лучша вайфу", "бест вайфу")},
     y2007: function(text) { return check(text, "2007", "2к7")},
     roma: function(text) { return check(text, "Рома", "рома", "футболіст", "футзаліст", "рамен", "роман", "Рамен", "Роман", "ромка", "Ромка")},
+    schoolMan: function(text) { return check(text, "Спурж", "спурж", "школьнік", "саша", "Саша", "Сашка", "сашка", "Санька", "делфі", "дону", "самоутвержденія", "самоутверждається")}
+
 }
 
 function check(text) {

@@ -115,6 +115,10 @@ bot.on('text', (ctx) => {
         ctx.reply("Однозначно");
         telegram.sendSticker(msg.chat.id, "CAADAgADRAEAAvmEHxwzgKCb2ndnXxYE")
     }
+    if(inclds.schoolMan(text)) {
+      ctx.reply("Согли, суждаю");
+    }
+
 
 })
 
