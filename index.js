@@ -141,6 +141,15 @@ bot.on('text', (ctx) => {
     if(inclds.agree(text)) {
         ctx.reply("Согли кста");
     }
+
+    if(inclds.send(text) && inclds.photo(text) && inclds.ukraine(text)) {
+        flickr.loadRandom('ukraine', ctx, 'ukraine');
+    }
+
+    if(inclds.send(text) && inclds.photo(text) && inclds.europe(text)) {
+        flickr.loadRandom('europe', ctx, 'europe');
+    }
+
 })
 
 bot.launch()

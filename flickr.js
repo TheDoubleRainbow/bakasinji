@@ -18,7 +18,9 @@ Flickr.tokenOnly({ api_key: "9bb8bfb805debb1a33c1ec06ed6ad4ca" }, function (erro
             const items = result.photos.photo;
             const rnd = Math.floor(Math.random() * items.length);
 
-            if(type === 'like' ) ctx.reply(`Такоє https://www.flickr.com/photos/${items[rnd].owner}/${items[rnd].id}/)`);
+            if(type === 'like' ) ctx.reply(`Такоє - https://www.flickr.com/photos/${items[rnd].owner}/${items[rnd].id})`);
+            if(type === 'ukraine' ) ctx.reply(`Ось вона рідна ненька - https://www.flickr.com/photos/${items[rnd].owner}/${items[rnd].id})`);
+            if(type === 'europe' ) ctx.reply(`Європа у всій своїй красі - https://www.flickr.com/photos/${items[rnd].owner}/${items[rnd].id})`);
 
 
         });
