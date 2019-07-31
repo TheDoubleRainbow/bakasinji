@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = {
-    newName: function(text) { return check(text, "називай мене", "Називай мене", "отнине я") },
-    whatsMyName: function(text) { return check(text, "як мене звуть", "яке моє імя", "хто я", "як ти мене називаєш", "як мене звуть")},
+    newName: function(text) { return check(text, "називай мене", "Називай мене", "отнине я", "зви мене") },
+    whatsMyName: function(text) { return check(text, "як мене звуть", "яке моє імя", "хто я", "як ти мене називаєш", "як мене звать")},
     botName: function(text) { return check(text, "Сінзі", "Сіндзі", "Бака", "бака", "сінзі", "сіндзі", "наблюдатель", "наблюдатель ОБСЕ") },
     greeting: function(text) { return check(text, "хай", "Хай", "хааай", "хаай", "Прівет", "прівет", "привет", "прівет", "Ку", "ку", "Шо как", "шо как", "як сам") },
     whatRUDoin: function(text) { return check(text, "шо робиш", "шо ти робиш", "чим занятий", "шо нового", "є шо сказать?")},
