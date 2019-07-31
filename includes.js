@@ -19,11 +19,13 @@ module.exports = {
     gooseVyebons: function(text) { return check(text, "гусь вийобується", "гусь опять вийобується", "гусь заєбав", "веталя вийобується", "веталь успокойся", "Гусь вийобується", "Гусь опять вийобується", "успокой гуся", "порішай гуся")},
     appreciation: function (text) { return check(text, "красавчик", "красава", "маладєц", "маладец", "харош", "бог", "молодець", "молодец")},
     insult: function(text) { return check(text, "підор", "підар", "нахуй", "гей", "самоутв", "дебіл", "дурак", "мудак", "тупенький", "тупєнькій")},
-    agree: function(text) { return check(text, "душа", "намальна", "норм", "круто", "ахуєнно")},
+    agree: function(text) { return check(text, "душа", "намальна", "намана", "норм", "круто", "ахуєнно", "ахуєть", "офігеть")},
     ukraine: function(text) { return check(text, "україн", "украін", "родін", "батьківщ", "нашої країни")},
     europe: function(text) { return check(text, "європ", "европ", "запад")},
     send: function(text) { return check(text, "скинь", "покаж", "пришли")},
     photo: function(text) { return check(text, "фото", "фотку", "картінку", "пікчу")},
+    waifu: function(text) { return check(text, "waifu", "вайфу", "аніметян")},
+    anime: function(text) { return check(text, "anime", "аніме", "тутлос", "тайтл", "шось глянуть", "шо подивитись")},
 
 }
 

@@ -16,6 +16,7 @@ const fs = require('fs');
 const req = require('request');
 const Telegram = require('telegraf/telegram');
 
+const mal = require('./mal');
 const flickr = require('./flickr');
 const inclds = require('./includes');
 const bot = new Telegraf('947236111:AAHvvf4MmoHcGrn77A9o_E6kZRIZ090D2rQ');
@@ -148,6 +149,14 @@ bot.on('text', (ctx) => {
 
     if(inclds.send(text) && inclds.photo(text) && inclds.europe(text)) {
         flickr.loadRandom('ukraine+city', ctx, 'europe');
+    }
+
+    if(inclds.botName(text) && inclds.send(text) && inclds.waifu(text)) {
+        mal.randomWaifu(ctx, replyName);
+    }
+
+    if(inclds.botName(text) && inclds.send(text) && inclds.anime(text)) {
+        mal.randomTitle(ctx, replyName);
     }
 
 })
