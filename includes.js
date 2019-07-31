@@ -18,9 +18,11 @@ module.exports = {
     whereDoULive: function(text) { return check(text, "Де ти живеш", "Де ти обітаєш", "де ти живеш", "де ти обітаєш", "де тебе можна найти", "ти де")},
     gooseVyebons: function(text) { return check(text, "гусь вийобується", "гусь опять вийобується", "гусь заєбав", "веталя вийобується", "веталь успокойся", "Гусь вийобується", "Гусь опять вийобується", "успокой гуся", "порішай гуся")}
 
+    appreciation: function (text) {return check(text, "красавчик", "маладєц", "харош", "бог", "молодець", "молодец")},
 }
 
 function check(text) {
+    text = text.toLowerCase();
     for(let i = 1; i < arguments.length; i++ ) {
         if(text.includes(arguments[i])) return arguments[i];
     }

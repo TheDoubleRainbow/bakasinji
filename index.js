@@ -128,6 +128,9 @@ bot.on('text', (ctx) => {
     }
 
 
+    if(inclds.botName(text) && inclds.appreciation(text)) {
+        ctx.reply("Спасіба, ти тож нічо вроді");
+    }
 })
 
 bot.launch()
