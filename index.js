@@ -116,7 +116,7 @@ bot.on('text', (ctx) => {
         telegram.sendSticker(msg.chat.id, "CAADAgADRAEAAvmEHxwzgKCb2ndnXxYE")
     }
     if(inclds.schoolMan(text)) {
-      ctx.reply("Согли, суждаю");
+      ctx.reply("Согли, осуждаю");
     }
 
 
