@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = {
-    newName: function(text) { return check(text, "називай мене", "Називай мене", "отнине я") },
-    whatsMyName: function(text) { return check(text, "як мене звуть", "яке моє імя", "хто я", "як ти мене називаєш", "як мене звуть")},
+    newName: function(text) { return check(text, "називай мене", "Називай мене", "отнине я", "зви мене") },
+    whatsMyName: function(text) { return check(text, "як мене звуть", "яке моє імя", "хто я", "як ти мене називаєш", "як мене звать")},
     botName: function(text) { return check(text, "Сінзі", "Сіндзі", "Бака", "бака", "сінзі", "сіндзі", "наблюдатель", "наблюдатель ОБСЕ") },
     greeting: function(text) { return check(text, "хай", "Хай", "хааай", "хаай", "Прівет", "прівет", "привет", "прівет", "Ку", "ку", "Шо как", "шо как", "як сам") },
     whatRUDoin: function(text) { return check(text, "шо робиш", "шо ти робиш", "чим занятий", "шо нового", "є шо сказать?")},
@@ -14,6 +14,9 @@ module.exports = {
     topWaifu: function(text) { return check(text, "топ вайфу", "лучша вайфу", "бест вайфу")},
     y2007: function(text) { return check(text, "2007", "2к7")},
     roma: function(text) { return check(text, "Рома", "рома", "футболіст", "футзаліст", "рамен", "роман", "Рамен", "Роман", "ромка", "Ромка")},
+    schoolMan: function(text) { return check(text, "Спурж", "спурж", "школьнік", "саша", "Саша", "Сашка", "сашка", "Санька", "делфі", "дону", "самоутвержденія", "самоутверждається")},
+    whereDoULive: function(text) { return check(text, "Де ти живеш", "Де ти обітаєш", "де ти живеш", "де ти обітаєш", "де тебе можна найти", "ти де")},
+
     appreciation: function (text) {return check(text, "красавчик", "маладєц", "харош", "бог", "молодець", "молодец")},
 }
 

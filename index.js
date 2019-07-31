@@ -115,6 +115,14 @@ bot.on('text', (ctx) => {
         ctx.reply("Однозначно");
         telegram.sendSticker(msg.chat.id, "CAADAgADRAEAAvmEHxwzgKCb2ndnXxYE")
     }
+    if(inclds.schoolMan(text)) {
+      ctx.reply("Согли, осуждаю");
+    }
+
+    if(inclds.botName(text) && inclds.whereDoULive(text)) {
+        ctx.reply("Тут \n http://www.voe.com.ua/sites/default/files/img_5641_1.jpg");
+    }
+
 
     if(inclds.botName(text) && inclds.appreciation(text)) {
         ctx.reply("Спасіба, ти тож нічо вроді");
