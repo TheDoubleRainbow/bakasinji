@@ -14,9 +14,11 @@ module.exports = {
     topWaifu: function(text) { return check(text, "топ вайфу", "лучша вайфу", "бест вайфу")},
     y2007: function(text) { return check(text, "2007", "2к7")},
     roma: function(text) { return check(text, "Рома", "рома", "футболіст", "футзаліст", "рамен", "роман", "Рамен", "Роман", "ромка", "Ромка")},
+    appreciation: function (text) {return check(text, "красавчик", "маладєц", "харош", "бог", "молодець", "молодец")},
 }
 
 function check(text) {
+    text = text.toLowerCase();
     for(let i = 1; i < arguments.length; i++ ) {
         if(text.includes(arguments[i])) return arguments[i];
     }

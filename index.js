@@ -116,6 +116,9 @@ bot.on('text', (ctx) => {
         telegram.sendSticker(msg.chat.id, "CAADAgADRAEAAvmEHxwzgKCb2ndnXxYE")
     }
 
+    if(inclds.botName(text) && inclds.appreciation(text)) {
+        ctx.reply("Спасіба, ти тож нічо вроді");
+    }
 })
 
 bot.launch()
