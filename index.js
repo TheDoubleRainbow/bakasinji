@@ -53,7 +53,7 @@ bot.on('sticker', ctx => {
 bot.on('text', (ctx) => {
     try {
         //console.log(ctx.message)
-        console.log('Message: from ' +  msg.from.first_name + ": " + ctx.message.text);
+        console.log('Message: from ' +  ctx.message.from.first_name + ": " + ctx.message.text);
         const msg = ctx.message;
         const text = msg.text;
         const replyName = names['' + msg.from.id] ? names['' + msg.from.id].name : msg.from.first_name;
