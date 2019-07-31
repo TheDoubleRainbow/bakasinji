@@ -3,10 +3,12 @@
 const Telegraf = require('telegraf');
 const fs = require('fs');
 const req = require('request');
+const Telegram = require('telegraf/telegram');
 
 const flickr = require('./flickr');
 const inclds = require('./includes');
 const bot = new Telegraf('947236111:AAHvvf4MmoHcGrn77A9o_E6kZRIZ090D2rQ');
+const telegram = new Telegram('947236111:AAHvvf4MmoHcGrn77A9o_E6kZRIZ090D2rQ');
 const names = JSON.parse(fs.readFileSync('names.json'));
 
 bot.use((ctx, next) => {
@@ -21,7 +23,16 @@ bot.command('romagay', (cmd) => {
     cmd.reply('Да я гей і шо')
 })
 
+bot.on('sticker', ctx => {
+    console.log(ctx.message.sticker);
+
+    if (ctx.file_id === "CAADAgADAlcAAp7OCwABS7hfCLsVXC0WBA") {
+        telegram.sendSticker(msg.chat.id, "CAADAgADAlcAAp7OCwABS7hfCLsVXC0WBA");
+    }
+})
+
 bot.on('text', (ctx) => {
+    console.log(ctx.message)
     console.log('Message: ' + ctx.message.text);
     const msg = ctx.message;
     const text = msg.text;
@@ -44,12 +55,23 @@ bot.on('text', (ctx) => {
     }
 
     if (inclds.botName(text) && inclds.greeting(text)) {
-        ctx.reply(`Вечер в хату, ${names['' + msg.from.id].name ? names['' + msg.from.id].name : msg.from.first_namegit}, я інертне говно кста`)
+        ctx.reply(`Вечер в хату, ${names['' + msg.from.id].name ? names['' + msg.from.id].name : msg.from.first_namegit}`)
     }
 
     if (inclds.botName(text) && inclds.whatDoULike(text)) {
         flickr.loadRandom('rozen+maiden', ctx, 'like');
     }
+
+    if(inclds.botName(text) && inclds.showYourself(text)) {
+        telegram.sendSticker(msg.chat.id, "CAADAgADGAADpC-ZHEO4a5lES82jFgQ")
+    }
+
+    if(inclds.catGirl(text)) {
+        telegram.sendSticker(msg.chat.id, "CAADAgADAlcAAp7OCwABS7hfCLsVXC0WBA");
+        ctx.reply('Хоть ти лопні хоть ти тресні некодевочки на первом месте')
+    }
+
+
 })
 
 bot.launch()
