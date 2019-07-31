@@ -36,7 +36,8 @@ bot.command('romagay', (cmd) => {
 
 bot.on('sticker', ctx => {
     console.log(ctx.message.sticker);
-    const sticker = ctx.message.sticker
+    const sticker = ctx.message.sticker;
+    const msg = ctx.message;
     const replyName = names['' + msg.from.id] ? names['' + msg.from.id].name : msg.from.first_name;
 
     if (sticker.file_id === "CAADAgADAlcAAp7OCwABS7hfCLsVXC0WBA") {
