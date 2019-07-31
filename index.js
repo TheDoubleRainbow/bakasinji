@@ -41,6 +41,10 @@ bot.on('sticker', ctx => {
     if (sticker.file_id === "CAADAgADAlcAAp7OCwABS7hfCLsVXC0WBA") {
         telegram.sendSticker(ctx.message.chat.id, "CAADAgADAlcAAp7OCwABS7hfCLsVXC0WBA");
     }
+
+    if (sticker.file_id === "CAADAgADCFgAAp7OCwAB0rRJHu579_kWBA") {
+        telegram.sendSticker(ctx.message.chat.id, "CAADAgADCFgAAp7OCwAB0rRJHu579_kWBA");
+    }
 })
 
 bot.on('text', (ctx) => {
@@ -75,7 +79,7 @@ bot.on('text', (ctx) => {
     }
 
     if(inclds.botName(text) && inclds.showYourself(text)) {
-        telegram.sendSticker(msg.chat.id, "CAADAgADGAADpC-ZHEO4a5lES82jFgQ")
+        telegram.sendSticker(msg.chat.id, "CAADBAADaAEAAptH1gABZRf_PvLISs0WBA")
     }
 
     if(inclds.catGirl(text)) {
@@ -83,6 +87,23 @@ bot.on('text', (ctx) => {
         ctx.reply('Хоть ти лопні хоть ти тресні некодевочки на первом месте')
     }
 
+    if(inclds.football(text)) {
+        ctx.reply('Футбольчік так то топ');
+        telegram.sendSticker(msg.chat.id, "CAADAgADRAEAAvmEHxwzgKCb2ndnXxYE");
+    }
+
+    if(inclds.boomer(text)) {
+        telegram.sendSticker(msg.chat.id, "CAADAgADCFgAAp7OCwAB0rRJHu579_kWBA");
+    }
+
+    if(inclds.botName(text) && inclds.topWaifu(text)) {
+        ctx.reply('Авторітетно заявляю шо Аска Лэнгли Сорью[2] (яп. 惣流・アスカ・ラングレー ; рус. Сорю Асука Рангурэ) є самой топовой вайфу в цьом міре, Хіната кусає локті прям, та і вобще Наруто переоценьонне аніме, я сам с детсва за єву, колись порізав вени після 25й серіі, мене тоді ще в ялту забрали, вот а потом ми поєбалися, ну як ми, там історія сложна. Короче смисл то в чом, шо треба уважать інших, а то будеш як золотий гусь якого розпотрошили з той басні');
+        telegram.sendSticker(msg.chat.id, "CAADBAADfAEAAptH1gAB7StjPTo6d4IWBA");
+    }
+
+    if(inclds.y2007(text)) {
+        telegram.sendSticker(msg.chat.id, "CAADAgADMAAD1RIaCwfc2P78oMQkFgQ");
+    }
 
 })
 
