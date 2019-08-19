@@ -41,7 +41,7 @@ bot.on('sticker', ctx => {
             stickers.send(ctx, 'boomer');
         }
     
-        if (sticker.file_id === "CAADAgADVVAAAp7OCwABEh58loKKDpkWBA") {
+        if (sticker.file_id === "CAADAgADVVAAAp7OCwABEh58loKKDpkWBA" || sticker.file_id === "CAADAgADHgADpC-ZHCVZWU_9dVg2FgQ") {
             ctx.reply(`Хорошо шо ти спитав, ${replyName}. Нормально, ошейніки робим, по тіхотьку по маленьку`);
         }
     }
